@@ -1,28 +1,37 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-
-        <section class="menu" id="menuWindow">
-            <h2>Menu</h2>
-            <button class="menu_btn" id="NewMapBTN">Nová mapa</button>
-            <button class="menu_btn" id="LoadMapBTN">Načíst mapu</button>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Car Track Builder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <section class="screen menu-screen" id="menuWindow">
+            <h1>Car Track Builder</h1>
+            <div class="button-group">
+                <button class="btn btn-primary" id="NewMapBTN">Nová mapa</button>
+                <button class="btn btn-secondary" id="LoadMapBTN">Načíst mapu</button>
+            </div>
         </section>
 
-        <section class="editor" id="editorWindow">
-            <h2>Editor</h2>
-            <button class="save_btn" id="saveBTN">Nová mapa</button>
-            <button class="back_btn" id="backBTN">Načíst mapu</button>
-            <div id="mapGrid"></div>
+        <section class="screen editor-screen hidden" id="editorWindow">
+            <header class="editor-header">
+                <h2>Editor tratě</h2>
+                <div class="editor-controls">
+                    <button class="btn btn-save" id="saveBTN">Uložit</button>
+                    <button class="btn btn-back" id="backBTN">Zpět do menu</button>
+                </div>
+            </header>
+            
+            <div class="grid-wrapper">
+                <div id="mapGrid"></div>
+            </div>
         </section>
+    </div>
 
-        <script src="script.js" async defer></script>
-    </body>
+    <script src="script.js"></script>
+</body>
 </html>
